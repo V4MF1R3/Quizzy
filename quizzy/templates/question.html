@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Question</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Quiz App</h1>
+    </header>
+    <div class="container" style="text-align: left;">
+        <h2>{{ question.question_text }}</h2>
+        <form method="POST" action="{% url 'quiz:submit_answer' session.id question.id %}">
+            {% csrf_token %}
+            <label><input type="radio" name="answer" value="1"> {{ question.option1 }}</label><br>
+            <label><input type="radio" name="answer" value="2"> {{ question.option2 }}</label><br>
+            <label><input type="radio" name="answer" value="3"> {{ question.option3 }}</label><br>
+            <label><input type="radio" name="answer" value="4"> {{ question.option4 }}</label><br>
+            <button type="submit">Submit Answer</button>
+        </form>
+    </div>
+</body>
+</html>

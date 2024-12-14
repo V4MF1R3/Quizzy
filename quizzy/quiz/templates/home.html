@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Home</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Quiz App</h1>
+    </header>
+    <div class="container">
+        <h2>Welcome to the Quiz App</h2>
+        <p>Start your quiz journey now!</p>
+        <a href="{% url 'quiz:start_quiz' %}"><button>Start Quiz</button></a>
+        <a href="/admin/"><button>Admin Login</button></a>
+    </div>
+</body>
+</html>

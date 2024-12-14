@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Quiz Results</h1>
+    </header>
+    <div class="container">
+        <p>Total Questions: {{ session.total_questions }}</p>
+        <p>Correct Answers: {{ session.correct_answers }}</p>
+        <p>Incorrect Answers: {{ session.incorrect_answers }}</p>
+        <a href="{% url 'quiz:start_quiz' %}"><button>Start New Quiz</button></a>
+    </div>
+</body>
+</html>
