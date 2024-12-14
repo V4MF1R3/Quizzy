@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-vch^d5864ymy!3^b@ui8bf-pu)8#s66y16bp21txat(_v_v%jc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['quizzy-1-3rz6.onrender.com',]
+ALLOWED_HOSTS = ['quizzy-1-3rz6.onrender.com', '127.0.0.1', 'localhost',]
 
 
 # Application definition
